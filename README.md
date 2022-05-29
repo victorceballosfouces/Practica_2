@@ -2,7 +2,7 @@
 Esta práctica nos introduce y explica las interrupciones hardware que, a rasgos generales, son señales que interrumpen la actividad normal de nuestro microprocesador y saltan a atenderla. En nuestro caso con la ESP32, podemos definir una función de rutina de servicio de interrupción que se llamará cuando un pin GPIO cambie el valor de su señal. Todos los pines de la ESP pueden ser configurados de esta manera.
 ## Codigo_2.1_Interrupción_GPIO
 
-```
+```cpp
 #include <Arduino.h>
  
 struct Button {
@@ -52,20 +52,20 @@ En el setup simplemente declaramos todo lo que necesitamos en el loop y añadimo
 Finalmente en el loop sacamos por pantalla cuantas veces se ha pulsado el boton con ``` Serial.printf("Button 1 has been pressed %u times\n", button1.numberKeyPresses) ``` cada vez que ```button1.pressed``` es igual a true. Con el último ```if()``` ejecutamos ```detachInterrupt(button1.PIN)``` para desconectar el interruptor al cabo de 1 minuto.
 
 Probando el programa tenemos la siguiente salida:
-```
+```cpp
 Button 1 has been pressed 1 times
 Button 1 has been pressed 2 times
 Button 1 has been pressed 3 times
 Button 1 has been pressed 4 times
 ```
 Y al minuto:
-```
+```cpp
 Interrupt Detached!
 ```
 
 ## Codigo_2.2_Interrupción_timer
 
-```
+```cpp
 #include <Arduino.h>
  
 volatile int interruptCounter;
