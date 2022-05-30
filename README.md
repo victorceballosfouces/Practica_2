@@ -106,5 +106,8 @@ void loop() {
 }
 ```
 
+![Image text](https://github.com/victorceballosfouces/Practica_2/blob/main/Practica_2.2/Imagen_2.2.png)
+
+
 ## Funcionamiento
 
